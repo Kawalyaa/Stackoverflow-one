@@ -5,7 +5,7 @@ blog_list = []
 date_and_time = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
 
 
-class MyBlogModel(object):
+class MyBlogModel():
     def __init__(self):
         self.db = blog_list
         self.dt = date_and_time

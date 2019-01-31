@@ -13,10 +13,10 @@ class MyBlog(Resource, MyBlogModel):
         data = request.get_json()
         tittle = data['tittle']
         description = data['description']
-        res = self.db.add_blog(tittle, description)
+        respo = self.db.add_blog(tittle, description)
         return make_response(jsonify({
             "message": 'ok',
-            "my_blog": res
+            "my_blog": respo
 
         }), 201)
 
